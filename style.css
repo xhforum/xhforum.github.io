@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  #iy0me8 {
+    color: #000000;
+  }
+
+  #iiq9fk {
+    color: #5e5e5e;
+  }
+
+  #i5y48g {
+    color: #000000;
+  }
+
+  #iu9q6h {
+    text-align: left;
+    color: #000000;
+  }
+
+  #idkljx {
+    text-align: left;
+  }
+
+  #iu5lxb {
+    text-align: left;
+  }
+
+  #iwd1vk {
+    text-align: left;
+  }
+
+  #im8mte {
+    text-align: left;
+  }
+
+  #ihitvy {
+    text-align: left;
+  }
+
+  #i2izmx {
+    text-align: center;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Roboto, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", sans-serif;
+  }
+
+  .logo path {
+    pointer-events: none;
+    fill: none;
+    stroke-linecap: round;
+    stroke-width: 7;
+    stroke: rgb(255, 255, 255);
+  }
+
+  .wechat-group img {
+    max-width: 220px;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    width: 100%;
+  }
+
+  .welcome-img img {
+    width: 100%;
+  }
+
+  .c7322 {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-family: 微软雅黑;
+  }
+
+  .line-dec {
+    color: #000000;
+  }
+
+  .left-text {
+    text-align: center;
+  }
+
+  .c34094 {
+    color: rgb(175, 175, 175);
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .div-center p {
+    text-align: left; /* 左对齐 */
+    text-indent: 2em; /* 首行缩进2em */
+    color:#000000;
+  }
+
+  .carousel {
+    width: 80%;
+    margin: 0 auto;
+    /* 图像居中 */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel ul {
+    position: relative;
+    width: 500%;
+    /* 足够容纳所有图片 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .carousel li {
+    float: left;
+    width: 20%;
+    height: 100%;
+    /* 单个图片占据的宽度 */
+  }
+
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    /* 图片自适应 */
+  }
+
+  .carousel_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+
+  .carousel_arrow.left {
+    left: 0;
+  }
+
+  .carousel_arrow.right {
+    right: 0;
+  }
+
+  .bspacer {
+    height: 1em; /* 或者您希望的行高 */
+  }
