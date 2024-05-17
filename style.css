@@ -117,7 +117,8 @@
   }
 
   .carousel {
-    width: 80%;
+    width: 950px;
+    height: 450px;
     margin: 0 auto;
     /* 图像居中 */
     position: relative;
@@ -168,4 +169,23 @@
 
   .bspacer {
     height: 1em; /* 或者您希望的行高 */
+  }
+
+  table {
+    width: 100%; /* 表格宽度 */
+    border-collapse: collapse; /* 合并边框 */
+  }
+  
+  th, td {
+    border: 1px solid #ddd; /* 单元格边框 */
+    padding: 8px; /* 单元格内边距 */
+    text-align: left; /* 文本对齐方式 */
+  }
+  
+  thead {
+    background-color: #f2f2f2; /* 表头背景颜色 */
+  }
+  
+  tfoot {
+    background-color: #f2f2f2; /* 表脚背景颜色 */
   }
