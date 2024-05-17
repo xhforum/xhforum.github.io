@@ -5,6 +5,7 @@
   <meta name="description" content=""/>
   <meta name="author" content=""/>
   <title>会议新闻</title>
+    <script src="https://cdn.staticfile.net/vue/3.2.36/vue.global.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://coscdn.htmlpage.cn/html-template/htmlpage_575_leadership_event/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://coscdn.htmlpage.cn/html-template/htmlpage_575_leadership_event/css/bootstrap-icons.css" rel="stylesheet"/>
@@ -79,16 +80,15 @@
           </nav>
           <div id="nav-tabContent" class="tab-content mt-5">
             <div id="nav-DayOne" role="tabpanel" aria-labelledby="nav-DayOne-tab" class="tab-pane fade show active">
-              <div class="row border-bottom pb-5 mb-5">
+              <div v-for="item in news" class="row border-bottom pb-5 mb-5">
                 <div class="col-lg-4 col-12">
                   <a href="#" >
-                    <img src="img/banner0.jpg" alt="" class="schedule-image img-fluid"/>
+                    <img :src=item.thumbnail class="schedule-image img-fluid"/>
                   </a>
                 </div>
                 <div class="col-lg-8 col-12 mt-3 mt-lg-0">
-                  <h4 class="mb-2"><a href="#" style="color:black">CCF将打造系列深度研讨会品牌——秀湖会议</a>
-                  </h4>
-                  <p style="color: black;">为了深入探讨计算机相关领域的科学、技术、应用、教育和产业等问题，为未来计算技术的发展和应用提供新思路和新建议，CCF将打造深度研讨会品牌——秀湖会议。近日，CCF秀湖会议首次学术委员会(AC)会议在CCF业务总部&学术交流中心举行。</p>
+                  <h4 class="mb-2"><a href="#" style="color:black">{{item.title}}</a></h4>
+                  <p style="color: black;">{{item.summary}}</p>
                   <div class="d-flex align-items-center mt-4">
                     <div class="avatar-group d-flex">
                       
@@ -99,58 +99,8 @@
                     </div>
                     <span class="mx-3 mx-lg-5"><i class="bi-clock me-2">
                       </i>
-                      2023-03-02 17:00
+                      {{item.publish_time}}
                     </span>
-                  </div>
-                </div>
-              </div>
-              <div class="row border-bottom pb-5 mb-5">
-                <div class="col-lg-4 col-12">
-                 
-                  <a href="#" >
-                    <img src="img/2023-04-24.png" alt="" class="schedule-image img-fluid"/>
-                  </a>
-                </div>
-                <div class="col-lg-8 col-12 mt-3 mt-lg-0">
-                  <h4 class="mb-2"><a href="#" style="color:black">首届CCF秀湖会议成功举办，探讨“ChatGPT 和基础模型：原理探究、技术挑战及伦理规范”</a>
-                  </h4>
-                  <p>近日，首届CCF秀湖会议在CCF业务总部&学术交流中心成功启航，来自行业30余位专家全程参与关于“ChatGPT 和基础模型：原理探究、技术挑战及伦理规范”的研讨。</p>
-                  <div class="d-flex align-items-center mt-4">
-                    <div class="avatar-group d-flex">
-                        <div class="ms-3">
-                        CCF业务总部
-                        </p>
-                      </div>
-                    </div>
-                    <span class="mx-3 mx-lg-5"><i class="bi-clock me-2">
-                      </i>
-                      2023-04-24
-                    </span>
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-4 col-12">
-                  <a href="#" >
-                    <img src="img/2023-06-19.png" alt="" class="schedule-image img-fluid"/>
-                  </a>
-                </div>
-                <div class="col-lg-8 col-12 mt-3 mt-lg-0">
-                  <h4 class="mb-2"><a href="#" style="color:black">探讨“人工智能时代计算机课程体系”——第三期CCF秀湖会议成功举办</a>
-                  </h4>
-                  <p>第三期CCF秀湖会议在CCF业务总部&学术交流中心圆满举办，来自学术界与工业界的二十余位专家全程参与关于“人工智能时代计算机课程体系”的交流研讨。研讨从算法、数据、系统等多个维度展开，讨论大语言模型为未来的计算机教育和学习带来的机遇和挑战。</p>
-                  <div class="d-flex align-items-center mt-4">
-                    <div class="avatar-group d-flex">
-                        <div class="ms-3">
-                        CCF业务总部
-                      </div>
-                    </div>
-                    <span class="mx-3 mx-lg-5"><i class="bi-clock me-2">
-                      </i>
-                      2023-06-19 16:58 
-                    </span>
-
                   </div>
                 </div>
               </div>
@@ -161,6 +111,31 @@
       </div>
     </div>
   </section>
+  <script>
+    const app = {
+      data() {
+        return {
+          news: [
+            {thumbnail:"wx_html/news/产学研群英聚苏州，共探存储创新未来之路_files/0", title:"产学研群英聚苏州，共探存储创新未来之路", publish_time:"2024-05-12 15:06", summary:"第十三期CCF秀湖会议在CCF业务总部&学术交流中心成功举办，来自学术界与工业界的二十余位专家围绕“新应用和硬件驱动下的存储技术创新”这一主题开展探讨和交流。本次会议的报告和讨论从存储介质与芯片&存储的物理基础、新硬件驱动下的新型存储器与设备创新、新应用牵引下的存储系统创新、存储服务与应用四个方面展开，同时就“未来存储技术路在何方”进行了深入探讨，对存储技术共促发展形成共识。"},
+            {thumbnail:"wx_html/news/产教研齐聚苏州，共商开源教育大计_files/0", title:"产教研齐聚苏州，共商开源教育大计", publish_time:"2024-04-29 02:29", summary:"第十二期CCF秀湖会议在CCF业务总部&学术交流中心成功举办，来自学术界与工业界的二十余位专家围绕“开源教育：使命、挑战与发展”这一主题开展探讨和交流。会议为期三天，针对“产业界视角的开源教育、从计算机培养方案看开源教育、开源教育的必要性和使命、开源通识和普及教育、开源课程和资源建设、开源教育行动计划”6个专题展开深入研讨，深化对开源教育的认识，推动开源教育的发展，规划开源教育的行动计划。"},
+            {thumbnail:"wx_html/news/CCF秀湖会议第十一期探讨“智能时代下人机交互的机遇与挑战”_files/0", title:"CCF秀湖会议第十一期探讨“智能时代下人机交互的机遇与挑战”", publish_time:"2024-03-31 14:14", summary:"第十一期CCF秀湖会议在CCF业务总部&学术交流中心举办，来自学术界与工业界的二十位专家围绕“智能时代下人机交互的机遇与挑战”这一主题开展探讨和交流。本次会议的报告和讨论从人机交互新场景与新应用，智能时代下推动交互自然性发展的新技术，人机交互、大模型与具身智能，智能时代下交互理论和范式变迁的新视角四个方面展开，就智能时代下人机交互的理论、方法、技术与应用的发展形成共识。"},
+            {thumbnail:"wx_html/news/“数据确权与流通”CCF秀湖会议第十期成功举办！_files/0", title:"“数据确权与流通”CCF秀湖会议第十期成功举办！", publish_time:"2024-03-24 13:02", summary:"第十期CCF秀湖会议在CCF业务总部&学术交流中心成功举办，来自学术界与工业界的二十余位专家围绕“数据确权与流通”这一主题开展探讨和交流。本次会议的报告和讨论从数据确权与流通背景、概念、内涵及边界；数据确权与流通的主要内容及关键技术；数据确权与流通关键技术及应用与创新；数据确权与流通的科学问题及主要目标；数据确权与流通的未来展望五个方面展开。通过深入的探讨和激烈的辩论，本次会议就数据确权与流通的问题与挑战及创新与发展之路形成初步共识。"},
+            {thumbnail:"wx_html/news/第九期“大模型下的软件工程：机遇与挑战”CCF秀湖会议第九期成功举办！_files/0", title:"第九期“大模型下的软件工程：机遇与挑战”CCF秀湖会议第九期成功举办！", publish_time:"2024-01-22 02:00", summary:"第九期CCF秀湖会议在CCF业务总部&学术交流中心成功举办，来自学术界与工业界的二十余位专家围绕“大模型下的软件工程：机遇与挑战”这一主题开展探讨和交流。本次会议围绕LLM4SE和SE4LLM展开，在“大模型下的软件工程，大模型与代码智能，大模型与软件质量保障，代码大模型的数据、评估与验证，大模型与开源工程，LLM4SE的未来与挑战”六个方面展开深入研讨，同时就大模型与软件工程未来共促发展形成共识。"},
+            {thumbnail:"wx_html/news/“算力网：新基建背景下的分布式系统”CCF秀湖会议第八期成功举办！_files/0", title:"“算力网：新基建背景下的分布式系统”CCF秀湖会议第八期成功举办！", publish_time:"2023-12-04 09:20", summary:"第八期CCF秀湖会议在CCF业务总部&学术交流中心成功举办，来自学术界与工业界的二十余位专家围绕“算力网：新基建背景下的分布式系统”这一主题开展探讨和交流。本次会议的报告和讨论从多样性算力与并网、分布式存储系统、新型计算机网络、分布式系统软件的现状与挑战四个方面展开，通过深入的探讨和激烈的辩论，就算力网研究与建设的问题和挑战形成共识。"},
+            {thumbnail:"wx_html/news/“科学智算(AI4S)_交叉与赋能”CCF秀湖会议第六期成功举办！_files/0", title:"“科学智算(AI4S):交叉与赋能”CCF秀湖会议第六期成功举办！", publish_time:"2023-10-22 15:12", summary:"第六期CCF秀湖会议在CCF业务总部&学术交流中心成功举办，来自学术界与工业界的二十余位专家围绕“科学智算(AI4S):交叉与赋能”这一主题开展探讨和交流。本次会议的报告和讨论从AI4S 基础理论、大语言模型与 AI4S、AI4S 算法与模型、 AI4S 助力基础科学研究、AI4S 计算平台和 AI4S 未来与挑战六个方面展开，同时就科学智算和交叉赋能共促发展形成共识。"},
+            {thumbnail:"wx_html/news/“软件定义汽车：智能与可信” CCF秀湖会议第五期成功举办！_files/0", title:"“软件定义汽车：智能与可信” CCF秀湖会议第五期成功举办！", publish_time:"2023-10-16 01:59", summary:"第五期CCF秀湖会议在CCF业务总部&学术交流中心成功举办，来自学术界与工业界的二十余位专家围绕“软件定义汽车：智能与可信”这一主题开展探讨和交流。本次会议的报告和讨论从行业现状、软硬件新架构、自动驾驶、智能座舱、可信保障五个方面展开，同时就智能网联汽车行业共促发展形成共识、发出倡议。"},
+            {thumbnail:"wx_html/news/“开源生态的挑战”CCF秀湖会议第七期成功举办！_files/0", title:"“开源生态的挑战”CCF秀湖会议第七期成功举办！", publish_time:"2023-11-06 09:00", summary:"第七期CCF秀湖会议在CCF业务总部&学术交流中心成功举办，来自学术界与工业界的二十余位专家围绕“开源生态的挑战”这一主题开展了为期三天的深入探讨与交流。本次会议的报告与研讨主题从开源软件供应链、开源的度量与智能化、科研成果开源转化、开源生态建设与人才培养四个方面展开，同时就开源生态创新与发展之路形成初步共识并发出倡议（见文末）。"},
+            {thumbnail:"wx_html/news/探讨“计算成像与智能解译系统国产化及应用”——第四期CCF秀湖会议成功举办_files/0", title:"探讨“计算成像与智能解译系统国产化及应用”——第四期CCF秀湖会议成功举办", publish_time:"2023-08-20 13:59", summary:"第四期CCF秀湖会议在CCF业务总部&学术交流中心成功举办，来自学术界与工业界的二十余位专家全程参与关于“计算成像与智能解译系统国产化及应用”的交流研讨。研讨从算法、数据、系统等多个维度展开，讨论计算成像为未来的信息获取和智能解译带来的机遇和挑战。"},
+            {thumbnail:"wx_html/news/探讨“人工智能时代计算机课程体系”——第三期CCF秀湖会议成功举办_files/0", title:"探讨“人工智能时代计算机课程体系”——第三期CCF秀湖会议成功举办", publish_time:"2023-06-19 08:58", summary:"第三期CCF秀湖会议在CCF业务总部&学术交流中心圆满举办，来自学术界与工业界的二十余位专家全程参与关于“人工智能时代计算机课程体系”的交流研讨。研讨从算法、数据、系统等多个维度展开，讨论大语言模型为未来的计算机教育和学习带来的机遇和挑战。"},
+            {thumbnail:"wx_html/news/第二期CCF秀湖会议圆满举办，探讨“人机物融合时代的智能软件系统：挑战与展望”_files/0", title:"第二期CCF秀湖会议圆满举办，探讨“人机物融合时代的智能软件系统：挑战与展望”", publish_time:"2023-06-05 00:30", summary:"第二期CCF秀湖会议在CCF业务总部&学术交流中心圆满举办，来自学术界与工业界的20余位专家全程参与关于“人机物融合时代的智能软件系统：挑战与展望”的研讨。"},
+            {thumbnail:"wx_html/news/首届CCF秀湖会议成功举办，探讨“ChatGPT 和基础模型：原理探究、技术挑战及伦理规范”_files/0", title:"首届CCF秀湖会议成功举办，探讨“ChatGPT 和基础模型：原理探究、技术挑战及伦理规范”", publish_time:"2023-04-24 09:30", summary:"近日，首届CCF秀湖会议在CCF业务总部&学术交流中心成功启航，来自行业30余位专家全程参与关于“ChatGPT 和基础模型：原理探究、技术挑战及伦理规范”的研讨。"},
+            {thumbnail:"wx_html/news/CCF将打造系列深度研讨会品牌——秀湖会议_files/0", title:"CCF将打造系列深度研讨会品牌——秀湖会议", publish_time:"2023-03-02 09:00", summary:"为了深入探讨计算机相关领域的科学、技术、应用、教育和产业等问题，为未来计算技术的发展和应用提供新思路和新建议，CCF将打造深度研讨会品牌——秀湖会议。近日，CCF秀湖会议首次学术委员会(AC)会议在CCF业务总部&学术交流中心举行。"},
+          ]
+        }
+      }
+    }
+    Vue.createApp(app).mount('#nav-DayOne')
+  </script>
    
     
     <footer>
