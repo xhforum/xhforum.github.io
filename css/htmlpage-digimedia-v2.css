@@ -183,13 +183,19 @@ body {
 
 
 .section-heading h6 {
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 22px;
+
   color: #000000;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
+.section-heading h5 {
+  font-size: 28px;
 
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
 .section-heading h4 {
   color: #2a2a2a;
   font-size: 35px;
@@ -424,12 +430,12 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #fe664e!important;
+  color: #1762ee!important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #fe664e!important;
+  color: #1762ee!important;
   opacity: 1;
 }
 
