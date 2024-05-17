@@ -111,6 +111,7 @@
     font-weight: 300;
   }
   .div-center p {
+    font-size: 18px;
     text-align: left; /* 左对齐 */
     text-indent: 2em; /* 首行缩进2em */
     color:#000000;
@@ -189,3 +190,13 @@
   tfoot {
     background-color: #f2f2f2; /* 表脚背景颜色 */
   }
+
+  .fixed-header {
+    position: fixed; /* 固定定位 */
+    top: 0; /* 紧贴页面顶部 */
+    left: 250; /* 从左边开始 */
+    width: 75%;
+    background: #ffffff; /* 背景颜色 */
+    z-index: 1000; /* 确保在页面内容之上 */
+    padding: 10px 0; /* 一些内边距 */
+}
