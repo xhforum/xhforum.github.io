@@ -230,3 +230,10 @@
 .pricing-title {
   color:#ffffff;
 }
+
+
+.divider {
+  border-bottom: 1px solid #aea6a6; /* 黑色分割线 */
+  height: 0; /* 确保div没有高度 */
+  margin: 10px 0; /* 上下边距 */
+}
