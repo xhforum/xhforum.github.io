@@ -201,3 +201,32 @@
     padding: 10px 0; /* 一些内边距 */
 }
 
+
+
+/*---------------------------------------
+  PRICING              
+-----------------------------------------*/
+.pricing-thumb {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-title-wrap,
+.pricing-body {
+  padding: 40px;
+}
+
+.pricing-body p{
+  font-size: 18;
+  color: #000000;
+}
+
+.pricing-title-wrap {
+  background: #273053;
+  padding: 20px 40px;
+}
+
+.pricing-title {
+  color:#ffffff;
+}
