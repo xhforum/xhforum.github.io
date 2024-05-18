@@ -15,50 +15,62 @@
     <link rel="stylesheet" href="css/animated.css" />
     <link rel="stylesheet" href="css/owl.css" />
     <!-- ***** Header Area Start ***** -->
-    <header data-wow-duration="0.75s" data-wow-delay="0s" class="header-area header-sticky wow slideInDown">
-     <div class="container">
-      <div class="row">
-       <div class="col-12 ">
-        <nav class="main-nav">
-         <!-- ***** Logo Start ***** -->
-         <a href="index.html" class="logo"><img src="img/logo-small-svg.svg" alt="HTMLPAGE" /></a>
-         <!-- ***** Logo End ***** -->
-         <!-- ***** Menu Start ***** -->
-         <ul class="nav">
-          <li class="scroll-to-section"><a href="#top">首页</a></li>
-          <li class="scroll-to-section"><a href="#about">关于我们</a></li>
-          <li class="scroll-to-section"><a href="#services">会议相关</a></li>
-          <li class="scroll-to-section"><a href="#blog">会议报告</a></li>
-          <li class="scroll-to-section dropdown"><a href="#" data-bs-toggle="dropdown" class="dropdown-toggle navbar-dark active">学术委员会</a>
-            <ul class="dropdown-menu ">
-             <li class="nav-item"><a href="#" class="dropdown-item"> 现任AC</a></li>
-             <li class="nav-item"><a href="#" class="dropdown-item"> 往届AC</a></li>
-            </ul>
-          </li>
-          <li class="scroll-to-section"><a href="#">会议新闻</a></li>
-          <li class="scroll-to-section"><a href="#">会议报告</a></li>
-          <li class="scroll-to-section dropdown"><a href="#" data-bs-toggle="dropdown" class="dropdown-toggle navbar-dark">会议指南</a>
-            <ul class="dropdown-menu ">
-             <li class="nav-item"><a href="#" class="dropdown-item"> 会议申请</a></li>
-             <li class="nav-item"><a href="#" class="dropdown-item"> 交通住宿</a></li>
-            </ul>
-          </li>
-          <li class="scroll-to-section"><a href="#">合作伙伴</a></li>
-          <li class="scroll-to-section"><a href="#contact">联系我们</a></li>
-          <li class="scroll-to-section">
-           <div class="border-first-button"></div></li>
-         </ul>
-         <a class="menu-trigger"><span>Menu</span></a>
-         <!-- ***** Menu End ***** -->
-        </nav>
-       </div>
+    <header class="header-area header-sticky">
+      <div class="container">
+        <div class="row "> 
+          <div class="col-12 ">
+            <nav class="main-nav">
+              <div class="fixed-header">
+              <!-- ***** Logo Start ***** -->
+              <a href="index.html" class="logo"><img style="width: auto;height: 40;" src="img/logo.jpg" alt="HTMLPAGE" /></a>
+              <!-- ***** Logo End ***** -->
+              <!-- ***** Menu Start ***** -->
+              <ul class="nav ">
+                <li class="scroll-to-section"><a href="index.html" style="font-size: 18px;font-weight: bold;">首页</a></li>
+                <li class="scroll-to-section" ><a href="Regulations.html" style="font-size: 18px;font-weight: bold;">组织条例</a></li>
+                <li class="scroll-to-section"><a href="NowAC.html" style="font-size: 18px;font-weight: bold;">学术委员会</a></li>
+                
+                
+                <li class="scroll-to-section"><a href="News.html" style="font-size: 18px;font-weight: bold;" class="active">会议新闻</a></li>
+                <li class="scroll-to-section"><a href="Reports.html" style="font-size: 18px;font-weight: bold;">会议报告</a></li>
+                <li class="scroll-to-section"><a href="Application.html" style="font-size: 18px;font-weight: bold;">会议申请</a></li>
+                
+                <li class="scroll-to-section"><a href="Collaborative.html" style="font-size: 18px;font-weight: bold;">合作伙伴</a></li>
+                <li class="scroll-to-section"><a href="ContectUS.html" style="font-size: 18px;font-weight: bold;">联系我们</a></li>
+                <li class="scroll-to-section">
+                  <div class="border-first-button"></div>
+                </li>
+              </ul>
+              <a class="menu-trigger"><span>Menu</span></a>
+              <!-- ***** Menu End ***** -->
+            </div>
+            </nav>
+          </div>
+        </div>
       </div>
-     </div>
     </header>
     <!-- ***** Header Area End ***** -->
 
+    <iframe id="wx_news_iframe" src="wx_html/News/0xx.html" onload="SetCwinHeight()" width="100%" height="100%" frameborder="0" scrolling="auto" sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
+    <script type="text/javascript">
+      function SetCwinHeight(){
+        var iframeid = document.getElementById("wx_news_iframe");   //frame是iframe的id
+        var header = document.getElementsByTagName("header")[0];
+        var offset_top = header.scrollHeight
+        iframeid.style.paddingTop = offset_top;
+        /*if (document.getElementById) {
+          if (iframeid && !window.opera) {
+              if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight) {
+                iframeid.height = iframeid.contentDocument.body.offsetHeight;
+              }else if (iframeid.Document && iframeid.Document.body.scrollHeight) {
+                iframeid.height = iframeid.Document.body.scrollHeight;
+              }
+          }
+        }*/
+      }
+    </script>
     
-    <div id="swt" class="contact-us section">
+    <!-- <div id="swt" class="contact-us section">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 offset-lg-3">
@@ -92,7 +104,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
